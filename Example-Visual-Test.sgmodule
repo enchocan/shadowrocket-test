@@ -1,0 +1,8 @@
+#!name=Shadowrocket Visual Script Test
+#!desc=仅在 example.com 显示脚本执行结果；测试后关闭。
+
+[Script]
+example.visual = type=http-response,pattern=^https:\/\/example\.com\/,requires-body=1,script-path=https://raw.githubusercontent.com/enchocan/shadowrocket-test/main/example-visual-test.js
+
+[MITM]
+hostname = %APPEND% example.com
