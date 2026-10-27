@@ -1,0 +1,2 @@
+// Visual probe on example.com only. Disable module after testing.
+$done({body:'<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body style="font-family:system-ui;text-align:center;padding:60px 12px"><h1>Shadowrocket 脚本执行成功</h1><p>HTTPS 解密与响应脚本均已生效</p></body></html>',headers:{'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store'}});
