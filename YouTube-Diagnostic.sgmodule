@@ -1,8 +1,8 @@
-#!name=YouTube Script Diagnostic
-#!desc=仅测试脚本是否执行，不去广告、不修改响应。测试后请关闭。
+#!name=YouTube Diagnostic - Request Only
+#!desc=仅验证请求脚本执行，不修改响应或拦截广告。测试后关闭。
 
 [Script]
-youtube.diagnostic = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(next|player|browse)(\?.*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/enchocan/shadowrocket-test/main/youtube-test.js
+youtube.diagnostic = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(next|player|browse)(\?.*)?$,requires-body=0,script-path=https://raw.githubusercontent.com/enchocan/shadowrocket-test/main/youtube-test.js
 
 [MITM]
 hostname = %APPEND% youtubei.googleapis.com
